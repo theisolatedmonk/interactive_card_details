@@ -3,8 +3,8 @@ import mobileBg from "@/images/bg-main-mobile.png";
 import cardBack from "@/images/bg-card-back.png";
 import cardFront from "@/images/bg-card-front.png";
 import cardLogo from "@/images/card-logo.svg";
-import iconComplete from "@/images/bg-card-logo.svg";
-import React, { useState } from 'react';
+import iconComplete from "@/images/icon-complete.svg";
+import React, { ChangeEvent, useState } from 'react';
 
 function TextInput() {
   const [value, setValue] = useState('');
@@ -16,7 +16,7 @@ function TextInput() {
 
 export default function Home() {
   function handleChange(event: ChangeEvent<HTMLInputElement>): void {
-    throw new Error("Function not implemented.");
+    ;
   }
 
   return (
@@ -37,8 +37,9 @@ export default function Home() {
           <Image className="z-0  relative" src={mobileBg} alt=""/>
           <Image className="z-10 mb-[400px] ml-12 absolute w-72 h-44" src={cardBack} alt="" />
           <div className="absolute z-30 h-6  mb-[400px] text-center w-20 ml-60  text-white ">111</div>
-        <div className="mt-20 w-[375px] flex outline-none gap-4 text-[hsl(278,68%,11%)]  flex-col p-6">
-          <div>
+       <div className="bothstat flex">
+       <div className="mt-20 w-[375px] flex outline-none gap-4 text-[hsl(278,68%,11%)]  flex-col p-6">
+          <div className="flex flex-col">
             <p>CARDHOLDER NAME</p>
             <input
               className="h-8 border rounded-md p-2  w-full"
@@ -84,6 +85,17 @@ export default function Home() {
             Confirm
           </div>
         </div>
+        <div className="mt-20 w-[375px] flex outline-none gap-6 text-[hsl(278,68%,11%)]  flex-col p-6 items-center justify-center my-6 hidden ">
+        <Image className="z-50 relative" src={iconComplete} alt=""/>
+       <div className="flex flex-col items-center gap-2">
+       <p className="text-3xl">THANK YOU!</p>
+        <p>We've added your card details</p>
+       </div>
+        <p  className="flex flex-col bg-[hsl(278,68%,11%)] items-center p-3 text-white w-full rounded-md">Continue</p>
+
+        </div>
+
+       </div>
       </div>
       </div>
     </main>
