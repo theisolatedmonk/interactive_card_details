@@ -40,13 +40,11 @@ export default function PaymentForm() {
         />
         <div className="absolute w-72 h-44 ml-4 mt-32 flex flex-col z-40 p-4 gap-4  text-white">
           <Image className="  w-12 absolute " src={cardLogo} alt="" />
-          <div className=" mt-16"> {formValues.cardNumber}</div>
+          <div className=" mt-16">0000 0000 0000 0000 {formValues.cardNumber}</div>
           <div className="flex justify-between">
-            <p>{formValues.name}</p>
+            <p placeholder="JANE APPLESEED">JANE APPLESEED{formValues.name}</p>
             <p>
-              {formValues.month}
-              <span>/</span>
-              {formValues.year}
+              00{formValues.month}<span>/</span>00{formValues.year}
             </p>
           </div>
         </div>
@@ -58,7 +56,7 @@ export default function PaymentForm() {
             alt=""
           />
           <div className="absolute z-30 h-6  mb-[400px] text-center w-20 ml-60  text-white ">
-            {formValues.cvc}
+            111{formValues.cvc}
           </div>
           <div className="bothstat flex">
             <div className="mt-20 w-[375px] flex outline-none gap-4 text-[hsl(278,68%,11%)]  flex-col p-6">
@@ -67,10 +65,7 @@ export default function PaymentForm() {
                 <input
                   className="h-8 border rounded-md p-2  w-full"
                   type="text"
-                  placeholder="e.g. Jane Appleseed"
-                  name="name"
-                  value={formValues.name}
-                  onChange={handleInputChange}
+                  placeholder="e.g. Jane Appleseed"  name="name" value={formValues.name} onChange={handleInputChange}
                 />
               </div>
               <div className=" flex flex-col">
@@ -78,10 +73,7 @@ export default function PaymentForm() {
                 <input
                   className="h-8 border rounded-md p-2  w-full focus:border-[hsl(278,68%,11%)] "
                   type="number"
-                  placeholder="e.g 1234 5678 9123 0000"
-                  name="cardNumber"
-                  value={formValues.cardNumber}
-                  onChange={handleInputChange}
+                  placeholder="e.g 1234 5678 9123 0000" name="cardNumber" value={formValues.cardNumber} onChange={handleInputChange}
                 />
               </div>
               <div className="flex justify-between items-center w-full ">
@@ -91,18 +83,12 @@ export default function PaymentForm() {
                     <input
                       className="h-8 border rounded-md p-2 text-center w-16"
                       type="number"
-                      placeholder="MM"
-                      name="month"
-                      value={formValues.month}
-                      onChange={handleInputChange}
+                      placeholder="MM" name="month" value={formValues.month} onChange={handleInputChange}
                     />
                     <input
                       className="h-8 border rounded-md p-2 text-center w-16"
                       type="number"
-                      placeholder="YY"
-                      name="year"
-                      value={formValues.year}
-                      onChange={handleInputChange}
+                      placeholder="YY" name="year" value={formValues.year} onChange={handleInputChange}
                     />
                   </div>
                 </div>
@@ -111,10 +97,7 @@ export default function PaymentForm() {
                   <input
                     className="h-8 border rounded-md p-2 text-center w-32"
                     type="number"
-                    placeholder="e.g. 123"
-                    name="cvc"
-                    value={formValues.cvc}
-                    onChange={handleInputChange}
+                    placeholder="e.g. 123" name="cvc" value={formValues.cvc} onChange={handleInputChange}
                   />
                 </div>
               </div>
