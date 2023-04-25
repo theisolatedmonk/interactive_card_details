@@ -49,12 +49,12 @@ export default function PaymentForm() {
     >
       <div className="sm:flex-row">
         <Image
-          className="z-20 ml-4 mt-32 w-72 h-44 absolute md:ml-[50px]"
+          className="z-20 ml-4 mt-32 w-72 h-44 absolute "
           src={cardFront}
           alt=""
         />
 
-        <div className="absolute w-72 h-44 ml-4 mt-32 flex flex-col z-40 p-4 gap-4  text-white md:ml-[50px]">
+        <div className="absolute w-72 h-44 ml-4 mt-32 flex flex-col z-40 p-4 gap-4  text-white">
           <Image className="  w-12 absolute " src={cardLogo} alt="" />
           <div className=" mt-16">
             0000 0000 0000 0000 {formValues.cardNumber}
@@ -70,7 +70,7 @@ export default function PaymentForm() {
         <div className="flex flex-col justify-center items-center bg-white md:flex-row ">
           <Image className="z-0  relative" src={bgImage} alt="" />
           <Image
-            className="z-10 mb-[400px] ml-12 absolute w-72 h-44 md:mb-[-300px] md:ml-[-340px]"
+            className="z-10 mb-[400px] ml-12 absolute w-72 h-44 md:mb-[-300px] md:ml-[-400px]"
             src={cardBack}
             alt=""
           />
@@ -158,9 +158,3 @@ export default function PaymentForm() {
     </main>
   );
 }
-
-
-
-
-
-
